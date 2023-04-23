@@ -1,15 +1,31 @@
-import Button from "./component/Button";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import About from "./pages/About";
+import Posts from "./pages/Posts";
+import PostDetails from "./pages/PostDetails";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <div>Welcome!</div>
-      <Button title="Hello!" />
-      <Button title="Hi!" />
-      <Button title="How!" />
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Posts />,
+    },
+    {
+      path: "about",
+      element: <About />,
+    },
+    {
+      path: "post-details",
+      element: <PostDetails />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
