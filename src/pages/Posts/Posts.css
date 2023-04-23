@@ -1,0 +1,17 @@
+body {
+}
+.posts-wrap {
+  margin-bottom: 15px;
+  padding: 1px 50px;
+}
+.tags-wrap {
+  padding: 0;
+}
+.tags-wrap > li {
+  list-style: none;
+  background-color: #f6f6f6;
+  margin: 5px;
+  padding: 0 5px;
+  display: inline-block;
+  border-radius: 4px;
+}
